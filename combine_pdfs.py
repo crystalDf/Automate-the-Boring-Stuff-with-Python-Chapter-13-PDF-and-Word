@@ -5,7 +5,7 @@
 import PyPDF2
 import os
 
-# Get all the PDF filenames.
+# Get all the PDF file names.
 pdf_files = []
 for filename in os.listdir('./toBeCombined'):
     if filename.endswith('.pdf'):
