@@ -24,5 +24,5 @@ for filename in pdf_files:
         page_obj = pdf_reader.getPage(page_num)
         pdf_writer.addPage(page_obj)
 
-# TODO: Save the resulting PDF to a file.
+# Save the resulting PDF to a file.
 
