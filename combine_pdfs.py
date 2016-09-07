@@ -14,7 +14,12 @@ for filename in os.listdir('./toBeCombined'):
 pdf_files.sort(key=str.lower)
 pdf_writer = PyPDF2.PdfFileWriter()
 
-# TODO: Loop through all the PDF files.
-# TODO: Loop through all the pages (except the first) and add them.
+# Loop through all the PDF files.
+for filename in pdf_files:
+    pdf_file_obj = open(filename, 'rb')
+    pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
+
+    # TODO: Loop through all the pages (except the first) and add them.
+
 # TODO: Save the resulting PDF to a file.
 
