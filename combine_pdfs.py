@@ -25,4 +25,6 @@ for filename in pdf_files:
         pdf_writer.addPage(page_obj)
 
 # Save the resulting PDF to a file.
-
+pdf_output = open('allminutes.pdf', 'wb')
+pdf_writer.write(pdf_output)
+pdf_output.close()
