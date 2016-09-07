@@ -19,7 +19,10 @@ for filename in pdf_files:
     pdf_file_obj = open(filename, 'rb')
     pdf_reader = PyPDF2.PdfFileReader(pdf_file_obj)
 
-    # TODO: Loop through all the pages (except the first) and add them.
+    # Loop through all the pages (except the first) and add them.
+    for page_num in range(1, pdf_reader.numPages):
+        page_obj = pdf_reader.getPage(page_num)
+        pdf_writer.addPage(page_obj)
 
 # TODO: Save the resulting PDF to a file.
 
